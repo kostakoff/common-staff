@@ -1,0 +1,51 @@
+- hosts: localhost
+  gather_facts: false
+  vars:
+    protected_api: 'https://oauth_protectedurl/health'
+    username: #username
+    password: #password
+
+  tasks:
+
+    - name: "Get redirect to dex"
+      ansible.builtin.uri:
+        url: "{{ protected_api }}"
+        method: GET
+        status_code: 200
+      register: dex_redirection
+
+    - name: "Login to dex"
+      ansible.builtin.uri:
+        url: "{{ dex_redirection.url }}"
+        headers:
+          Cookie: "{{ dex_redirection.cookies_string }}"
+        body_format: form-urlencoded
+        body:
+          login: "{{ username }}"
+          password: "{{ password }}"
+          enter: Submit
+        method: POST
+        status_code: 303
+      register: login
+
+    - name: "Get redirect to oauth"
+      ansible.builtin.uri:
+        headers:
+          Cookie: "{{ dex_redirection.cookies_string }}"
+        url: "{{ login.location }}"
+        method: GET
+        status_code: 200
+      register: oauth_redirection
+
+    - name: "Call protected api"
+      ansible.builtin.uri:
+        headers:
+          Cookie: "{{ oauth_redirection.cookies_string }}"
+        url: "{{ protected_api }}"
+        method: GET
+        status_code: 200
+      register: failurebin_responce
+
+    - name: "Check api responce"
+      ansible.builtin.debug:
+        msg: "{{ failurebin_responce.status }}"
