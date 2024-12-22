@@ -1,0 +1,72 @@
+body {
+  background: -moz-linear-gradient(top,  #b4e2ff 0%, #ffffff 100%);
+  background: -webkit-linear-gradient(top,  #b4e2ff 0%,#ffffff 100%);
+  background: linear-gradient(to bottom,  #b4e2ff 0%,#ffffff 100%);
+}
+h1, h2 {
+  font-weight: bold;
+}
+h1 {
+  font-size: 2rem;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #333;
+  margin: 0 0 1rem;
+}
+a {
+  text-decoration: underline;
+  color: #004b7d;
+}
+a:hover {
+  text-decoration: none;
+}
+.construction-background {
+  background-image: url(../images/construction_men.svg), url(../images/grass.svg), url(../images/construction-statue.svg);
+  background-position: center bottom 40px, center bottom, center bottom;
+  background-size: 75%, 200%, auto 70%;
+  background-origin: border-box, border-box, border-box;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  padding: 0;
+}
+.error-background {
+  background-image: url(../images/traveling-man.svg), url(../images/grass.svg), url(../images/statue.svg);
+  background-position: left 20% bottom 40px, center bottom, right 20% bottom;
+  background-size: 55%, 200%, auto 70%;
+  background-origin: border-box, border-box, border-box;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  padding: 0;
+}
+.clouds-animated {
+    background: url(../images/clouds.svg) repeat 0 0;
+    background-size: 500px 50px;
+    -webkit-animation: slide 60s linear infinite;
+    height: 50px;
+    z-index: -1;
+    position: relative;
+  }
+  @-webkit-keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: 500px 0;
+  }
+}
+/* Medium and up */
+@media screen and (min-width: 40em) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .construction-background {
+    background-position: right 5% bottom 40px, right bottom, right 20% bottom 60%;
+    background-size: 40%, 130%, auto 75%;
+  }
+  .error-background {
+    background-position: right 30% bottom 60px, right bottom, right 15% bottom 57%;
+    background-size: 20%, 130%, auto 75%;
+  }
+  .clouds-animated {
+    background-size: 1440px 200px;
+    height: 200px;
+  }
+}

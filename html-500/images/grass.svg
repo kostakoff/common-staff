@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1441 232" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-1558,-2121)">
+        <g transform="matrix(0.945226,0,0,0.844318,3020.89,1364.8)">
+            <g id="Grass">
+                <g transform="matrix(1.05795,0,0,0.902949,-1510.23,204.011)">
+                    <path d="M183.993,990.458C368.394,886.103 597.876,760.923 1031.6,766.731C1210.85,769.132 1324.37,787.359 1405.4,811.243C1405.4,903.599 1405.1,994.83 1405.1,1068.8C1188.58,1068.8 231.364,1068.88 47.17,1068.88C90.102,1044.08 141.92,1014.27 183.993,990.458Z" style="fill:rgb(51,102,0);"/>
+                </g>
+                <g transform="matrix(1.23172,0,0,0.902949,-1974.87,284.069)">
+                    <path d="M347.381,913.186C467.579,824.012 597.871,761.891 1031.6,766.731C1252.76,769.199 1449.68,804.878 1583.97,893.682C1583.97,926.595 1584.02,948.557 1584.02,981.47C1462.92,981.47 1085.92,981.29 984.92,981.29C847.44,981.29 347.429,981.553 347.429,981.553C347.429,981.553 347.381,941.645 347.381,913.186Z" style="fill:rgb(102,153,51);"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
