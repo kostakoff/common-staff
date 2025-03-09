@@ -1,0 +1,3 @@
+metrics_mapping:
+  - name: agent_ping
+    key: agent.ping
